@@ -204,6 +204,9 @@ list_of_numbers = [
     1468,
 ]
 
+# I believe this function time complexity is O(n^2) because of the nested loops.
+# What's the best way to reduce the time complexity?'
+
 
 def find_two_entries_summing_to_target(numbers: list[int], target: int) -> int:
     """

@@ -218,6 +218,3 @@ def find_three_entries_summing_to_target(numbers: list[int], target: int) -> int
 
 
 print(find_three_entries_summing_to_target(list_of_numbers, 2020))
-
-print(len(list_of_numbers))
-print(range(len(list_of_numbers)))

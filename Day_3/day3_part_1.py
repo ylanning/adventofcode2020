@@ -1,19 +1,19 @@
 from puzzle_input import input_map
 
 
-map_test = [
-    "..##.......",
-    "#...#...#..",
-    ".#....#..#.",
-    "..#.#...#.#",
-    ".#...##..#.",
-    "..#.##.....",
-    ".#.#.#....#",
-    ".#........#",
-    "#.##...#...",
-    "#...##....#",
-    ".#..#...#.#",
-]
+# map_test = [
+#     "..##.......",
+#     "#...#...#..",
+#     ".#....#..#.",
+#     "..#.#...#.#",
+#     ".#...##..#.",
+#     "..#.##.....",
+#     ".#.#.#....#",
+#     ".#........#",
+#     "#.##...#...",
+#     "#...##....#",
+#     ".#..#...#.#",
+# ]
 
 
 def count_trees(map: list, right_step: int, down_step: int) -> int:
@@ -35,7 +35,6 @@ def count_trees(map: list, right_step: int, down_step: int) -> int:
         # modulus operator note to remember: a % b always return a positive number / a value
         # in the range of 0 to b-1
         col = (col + right_step) % len(map[0])
-
     return tree_count
 
 
