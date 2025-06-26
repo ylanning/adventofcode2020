@@ -21,6 +21,7 @@ def matching_index_letter(password: list) -> int:
         min_index = int(min_index) - 1
         max_index = int(max_index) - 1
         if max_index <= len(password):
+            # The letter must appear at exactly one of the two positions, not both or neither
             if (password[min_index] == letter) ^ (password[max_index] == letter):
                 valid_passwords_count += 1
     return valid_passwords_count

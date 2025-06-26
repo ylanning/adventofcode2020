@@ -215,6 +215,25 @@ def find_three_entries_summing_to_target(numbers: list[int], target: int) -> int
             for k in range(j + 1, len(numbers)):
                 if numbers[i] + numbers[j] + numbers[k] == target:
                     return numbers[i] * numbers[j] * numbers[k]
+    return None
+
+
+def find_three_entries_summing_to_target_2(numbers: list[int], target: int) -> int:
+    num_set = set(numbers)
+    # iterate range numbers[0] -> numbers[200]
+    for i in range(len(numbers)):
+        # iterate range numbers[1] -> numbers[200]
+        for j in range(i + 1, len(numbers)):
+            # calculate the 3rd number
+            complement = target - numbers[i] - numbers[j]
+
+            # check if complement is in the set
+            # sum the numbers
+            if complement in num_set:
+                print("complement", complement)
+                return numbers[i] * numbers[j] * complement
+    return None
 
 
 print(find_three_entries_summing_to_target(list_of_numbers, 2020))
+print(find_three_entries_summing_to_target_2(list_of_numbers, 2020))
