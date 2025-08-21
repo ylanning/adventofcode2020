@@ -1,7 +1,5 @@
 from puzzle_input import inputs
 
-
-
 def count_yes_answers(answers:str) -> int:
     # count the total number of unique 'yes' answers for all groups
 
